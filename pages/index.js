@@ -8,16 +8,19 @@ import Layout from "@/components/Layout";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+const Home = () => {
   return (
     <>
-    
-    <div className={styles.container}>
-      <h1>hello</h1>
-    </div>
-  
-      
-      
+      <h1>Welcome to My Website</h1>
+      <p>This is the home page.</p>
+      <p>This is the home page.</p>
+      <p>This is the home page.</p>
     </>
   );
-}
+};
+
+Home.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
+};
+
+export default Home;
